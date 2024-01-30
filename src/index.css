@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'CormorantInfant-Bold';
+    src: url('./assets/fonts/CormorantInfant-Bold.woff2') format('woff2');
+    src: url('./assets/fonts/CormorantInfant-Bold.woff') format('woff');
+    src: url('./assets/fonts/CormorantInfant-Bold.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'CormorantInfant-Regular';
+    src: url('./assets/fonts/CormorantInfant-Regular.woff2') format('woff2');
+    src: url('./assets/fonts/CormorantInfant-Regular.woff') format('woff');
+    src: url('./assets/fonts/CormorantInfant-Regular.ttf') format('truetype');
+  }
+
+.main-font-bold {
+    font-family: 'CormorantInfant-Bold';
+}
+.main-font {
+    font-family: 'CormorantInfant-Regular';
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth h-full;
+    }
+    body {
+        @apply bg-slate-300 font-normal;
+    }
+  }
+
+@layer components {
+    .main-wrapper {
+        @apply min-h-screen overflow-hidden flex flex-col m-0 m-auto;
+    }
+
+    .container {
+        @apply max-w-6xl m-0 m-auto p-8;
+    }
+    .body-list {
+        @apply flex flex-col gap-3 items-center bg-indigo-700 rounded-lg p-16 shadow-xl max-sm:px-3;
+    }
+
+    .main-title {
+        @apply text-3xl not-italic leading-normal uppercase flex justify-center text-slate-300;
+    }
+    .task-wrapper {
+        @apply flex flex-col gap-5 relative w-full items-center;
+    }
+    .task {
+        @apply bg-slate-200 flex relative w-full min-h-4 rounded-lg p-4 items-center justify-center text-center outline-none shadow-xl;
+    }
+    .task-text{
+        @apply bg-slate-200 flex relative w-full min-h-4 rounded-lg p-4 items-center justify-center text-center outline-none shadow-xl;
+    }
+    .task-buttons{
+        @apply flex relative items-center justify-center gap-4 max-sm:flex-col max-sm:gap-2;
+    }
+    .task-btn{
+        @apply  bg-slate-200 flex text-base not-italic leading-normal uppercase rounded-lg px-4 py-3 items-center justify-center text-center outline-none hover:bg-green-600 transition-all shadow-xl;
+    }
+    .btn-del{
+        @apply hover:bg-red-600 transition-all;
+    }
+    .task-btn:disabled{
+        @apply  bg-slate-500;
+    }
+}
