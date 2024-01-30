@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 
 export default defineConfig({
+  base: "/Vue3-Todo-List",
   plugins: [
     vue(),
   ],
